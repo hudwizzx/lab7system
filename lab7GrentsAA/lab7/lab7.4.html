@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToggleColor Component</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const ToggleColor = () => {
+            let color = "red";
+
+            const toggleColor = () => {
+                color = color === "red" ? "green" : "red";
+                document.body.style.backgroundColor = color;
+            };
+
+            const button = document.createElement("button");
+            button.innerText = "Toggle Color";
+            button.onclick = toggleColor;
+            document.getElementById("root").appendChild(button);
+        };
+
+        ToggleColor();
+    </script>
+</body>
+</html>

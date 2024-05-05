@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyEven Component</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script>
+        const OnlyEven = ({ arr }) => {
+            const evenNumbers = arr.filter(num => num % 2 === 0);
+            return evenNumbers.join(', ');
+        };
+
+        document.getElementById("root").innerText = OnlyEven({ arr: [14, 5, 6, 12, 21, 2] });
+    </script>
+</body>
+</html>
